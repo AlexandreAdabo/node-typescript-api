@@ -9,20 +9,33 @@
     "start:dev": "ts-node-dev dist/index.js",
     "lint": "eslint ./src ./test --ext .ts",
     "lint:fix": "eslint ./src ./test --ext .ts --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "style:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "style:fix": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "test": "jest",
+    "test:functional": "jest --projects ./tests --forceExit --runInBand"
   },
   "author": "Alexandre Adabo",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
     "@types/module-alias": "^2.0.4",
     "@types/node": "^25.0.10",
+    "@types/supertest": "^6.0.3",
     "@typescript-eslint/eslint-plugin": "^8.54.0",
     "@typescript-eslint/parser": "^8.54.0",
     "eslint": "^9.39.2",
+    "jest": "^30.2.0",
+    "prettier": "^3.8.1",
+    "supertest": "^7.2.2",
+    "ts-jest": "^29.4.6",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@overnightjs/core": "^1.7.6",
+    "body-parser": "^2.2.2",
+    "express": "^5.2.1",
     "module-alias": "^2.2.3"
   }
 }
