@@ -11,7 +11,7 @@
     "lint:fix": "eslint ./src ./test --ext .ts --fix",
     "style:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\"",
     "style:fix": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
-    "test": "jest",
+    "test:unit": "jest",
     "test:functional": "jest --projects ./tests --forceExit --runInBand"
   },
   "author": "Alexandre Adabo",
@@ -34,6 +34,8 @@
   },
   "dependencies": {
     "@overnightjs/core": "^1.7.6",
+    "@types/axios": "^0.14.4",
+    "axios": "^1.13.4",
     "body-parser": "^2.2.2",
     "express": "^5.2.1",
     "module-alias": "^2.2.3"
